@@ -18,5 +18,8 @@ var abi = [];
 var contract =new web3.eth.Contract(abi,address);
 
 function transfer(){
-    
+    var inputval=document.getElementById("address").value;
+    web3.eth.getaccount().then(function(account){
+        return contract.deposit()
+    })
 }
